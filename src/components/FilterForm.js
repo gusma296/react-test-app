@@ -9,9 +9,14 @@ const FilterForm = () => {
   const handleChangeId = event => setId(event.target.value);
   const handleChangeName = event => setname(event.target.value);
 
+  const capitalize = s => {
+    if (typeof s !== "string") return "";
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  };
+
   const handleFilter = event => {
     if (id || name) {
-      dispatch({ type: "APPLY_FILTER", id: id, name: name });
+      dispatch({ type: "APPLY_FILTER", id: id, name: capitalize(name) });
     } else {
       alert("form is empty");
     }

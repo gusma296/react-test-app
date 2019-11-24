@@ -11,7 +11,7 @@
     border-radius: 10px;
     position:fixed;
     background: white;
-    width: 50%;
+    width: 40%;
     height: auto;
     top:50%;
     left:50%;
@@ -42,6 +42,7 @@
     font-size: 16px;
     margin: 4px 10px;
     outline-style: none;
+    text-transform: capitalize;
   }
   .SideNav {
     position: fixed;
@@ -85,6 +86,10 @@
   font-weight: bold;
   padding: 10px 26px;
   text-decoration: none;
+  
+}
+#btn{
+  margin-left: 87%;
 }
 .button-apply:hover {
   background-color: #5cbf2a;

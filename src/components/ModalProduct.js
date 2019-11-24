@@ -29,7 +29,7 @@ const ModalProduct = ({ handleClose, show, item }) => {
             </tbody>
           </table>
         )}
-        <button className={"button-apply"} onClick={handleClose}>
+        <button id="btn" className={"button-apply"} onClick={handleClose}>
           Ok
         </button>
       </section>

@@ -13,7 +13,7 @@ const FilterForm = () => {
     if (id || name) {
       dispatch({ type: "APPLY_FILTER", id: id, name: name });
     } else {
-      alert("form kosong");
+      alert("form is empty");
     }
 
     setname("");

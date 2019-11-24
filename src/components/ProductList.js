@@ -112,7 +112,7 @@ const ProductList = ({ data }) => {
         </table>
       ) : (
         <div>
-          <h4>Data tidak ditemukan</h4>
+          <h4>Data not found</h4>
         </div>
       )}
       <ModalProduct show={show} item={product} handleClose={handleClose} />

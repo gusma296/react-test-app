@@ -1,0 +1,18 @@
+.Header {
+  width: 100%;
+  height: 56px;
+  background-color: rgb(236, 236, 236);
+}
+.TextLogo {
+  font-size: 40px;
+  margin-left: 30px;
+  font-style: italic;
+  font-weight: bold;
+  color: #1a1d46;
+}
+.content {
+  padding-left: 16%;
+  padding-top: 25px;
+  padding-right: 25px;
+}
+

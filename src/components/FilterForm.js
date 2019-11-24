@@ -9,7 +9,7 @@ const FilterForm = () => {
   const handleChangeId = event => setId(event.target.value);
   const handleChangeName = event => setname(event.target.value);
 
-  const handleFilter = event => {
+  const handleFilter = () => {
     if (id || name) {
       dispatchs({ type: "APPLY_FILTER", id: id, name: name });
     } else {
@@ -18,13 +18,12 @@ const FilterForm = () => {
 
     setname("");
     setId("");
-    event.preventDefault();
   };
 
   return (
     <div className="filter-form">
       <h3>Filter</h3>
-      <form onSubmit={handleFilter}>
+      <form id="form-filter" onSubmit={handleFilter}>
         <table>
           <tbody>
             <tr>
@@ -33,6 +32,7 @@ const FilterForm = () => {
                 <input
                   type="text"
                   value={name}
+                  id='name'
                   onChange={handleChangeName}
                   className="input"
                 />
@@ -42,6 +42,7 @@ const FilterForm = () => {
               <td>Id</td>
               <td>
                 <input
+                  id='id'
                   type="text"
                   value={id}
                   onChange={handleChangeId}

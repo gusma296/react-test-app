@@ -48,7 +48,7 @@ export const productData = [
       description: "Sensodent"
     },
     {
-      id: '345672',
+      id: '945672',
       name: "Sampo",
       price: '20000',
       description: "Clear"

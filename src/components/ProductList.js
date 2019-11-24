@@ -63,34 +63,30 @@ const ProductList = ({ data }) => {
         <table className="table" style={{ width: "100%" }}>
           <thead>
             <tr>
-              <th className={"th"}>
+              <th onClick={handleSortId} className={"th"}>
                 Id{" "}
                 <img
-                  onClick={handleSortId}
                   alt="sort"
                   src="https://image.flaticon.com/icons/png/512/36/36861.png"
                 />
               </th>
-              <th className={"th"}>
+              <th onClick={handleSortName} className={"th"}>
                 Name{" "}
                 <img
-                  onClick={handleSortName}
                   alt="sort"
                   src="https://image.flaticon.com/icons/png/512/36/36861.png"
                 />
               </th>
-              <th className={"th"}>
+              <th onClick={handleSortPrice} className={"th"}>
                 Price{" "}
                 <img
-                  onClick={handleSortPrice}
                   alt="sort"
                   src="https://image.flaticon.com/icons/png/512/36/36861.png"
                 />
               </th>
-              <th className={"th"}>
+              <th onClick={handleSortDesc} className={"th"}>
                 Descriptions{" "}
                 <img
-                  onClick={handleSortDesc}
                   alt="sort"
                   src="https://image.flaticon.com/icons/png/512/36/36861.png"
                 />

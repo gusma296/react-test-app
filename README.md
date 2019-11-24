@@ -5,4 +5,4 @@
 - Sort Ascending Descending
 
 Testing
-- unit test with jest and enzyme
+- unit test with enzyme

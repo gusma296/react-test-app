@@ -5,25 +5,26 @@ import { DispatchContext } from "../App";
 const FilterForm = () => {
   const [id, setId] = useState("");
   const [name, setname] = useState("");
-  const dispatchs = useContext(DispatchContext);
+  const dispatch = useContext(DispatchContext);
   const handleChangeId = event => setId(event.target.value);
   const handleChangeName = event => setname(event.target.value);
 
-  const handleFilter = () => {
+  const handleFilter = event => {
     if (id || name) {
-      dispatchs({ type: "APPLY_FILTER", id: id, name: name });
+      dispatch({ type: "APPLY_FILTER", id: id, name: name });
     } else {
       alert("form kosong");
     }
 
     setname("");
     setId("");
+    event.preventDefault();
   };
 
   return (
     <div className="filter-form">
       <h3>Filter</h3>
-      <form id="form-filter" onSubmit={handleFilter}>
+      <form id="form-filter">
         <table>
           <tbody>
             <tr>
@@ -32,7 +33,7 @@ const FilterForm = () => {
                 <input
                   type="text"
                   value={name}
-                  id='name'
+                  id="name"
                   onChange={handleChangeName}
                   className="input"
                 />
@@ -42,7 +43,7 @@ const FilterForm = () => {
               <td>Id</td>
               <td>
                 <input
-                  id='id'
+                  id="id"
                   type="text"
                   value={id}
                   onChange={handleChangeId}
@@ -52,7 +53,7 @@ const FilterForm = () => {
             </tr>
           </tbody>
         </table>
-        <button type="submit" className="button-apply">
+        <button onClick={handleFilter} type="submit" className="button-apply">
           Apply
         </button>
       </form>

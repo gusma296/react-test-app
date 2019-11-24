@@ -1,12 +1,14 @@
 import React, { useState, useContext } from "react";
 import "./style/styles.css";
+import { DispatchContext } from "../App";
 
-const FilterForm = ({ dispatch }) => {
+const FilterForm = () => {
   const [id, setId] = useState("");
   const [name, setname] = useState("");
-  const dispatchs = useContext(dispatch);
+  const dispatchs = useContext(DispatchContext);
   const handleChangeId = event => setId(event.target.value);
   const handleChangeName = event => setname(event.target.value);
+
   const handleFilter = event => {
     if (id || name) {
       dispatchs({ type: "APPLY_FILTER", id: id, name: name });
@@ -18,6 +20,7 @@ const FilterForm = ({ dispatch }) => {
     setId("");
     event.preventDefault();
   };
+
   return (
     <div className="filter-form">
       <h3>Filter</h3>
@@ -28,6 +31,7 @@ const FilterForm = ({ dispatch }) => {
               <td>Name</td>
               <td>
                 <input
+                  type="text"
                   value={name}
                   onChange={handleChangeName}
                   className="input"
@@ -37,7 +41,12 @@ const FilterForm = ({ dispatch }) => {
             <tr>
               <td>Id</td>
               <td>
-                <input value={id} onChange={handleChangeId} className="input" />
+                <input
+                  type="text"
+                  value={id}
+                  onChange={handleChangeId}
+                  className="input"
+                />
               </td>
             </tr>
           </tbody>

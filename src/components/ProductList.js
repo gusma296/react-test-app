@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./style/styles.css";
 import { ModalProduct } from "../components";
+import {  } from "../App";
 
 const ProductList = ({ data }) => {
   const [product, setProduct] = useState([]);
@@ -36,6 +37,7 @@ const ProductList = ({ data }) => {
     if (sort.price === false) {
       return -1 * a.price.localeCompare(b.price);
     }
+    return false;
   });
 
   const showModal = item => {

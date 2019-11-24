@@ -4,7 +4,7 @@ import { productReducers } from "./reducers/productReducers";
 import { productData } from "./reducers/productData";
 import useCombinedReducers from "use-combined-reducers";
 
-const DispatchContext = createContext(null);
+export const DispatchContext = createContext(null);
 
 const App = () => {
   const [state, dispatch] = useCombinedReducers({
